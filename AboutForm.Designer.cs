@@ -58,7 +58,7 @@ namespace AutoSave
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(173, 24);
             label3.TabIndex = 4;
-            label3.Text = "版本号：1.0.2.0\r\n电子邮箱地址：lhtxq@live.com";
+            label3.Text = "版本号：1.0.2.1\r\n电子邮箱地址：lhtxq@live.com";
             // 
             // richTextBox1
             // 

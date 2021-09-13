@@ -112,7 +112,7 @@ namespace AutoSave
                     Globals.ThisAddIn.Application.ActiveWorkbook.Save();
                     SaveCount++;
                     label1.Label = "保存操作计数：" + SaveCount.ToString();
-                    File.Copy(Globals.ThisAddIn.Application.ActiveWorkbook.FullName, SaveAsPath.Text + "\\" + DateTime.Now.ToString("yyyyMMddHHmmss") + Globals.ThisAddIn.Application.ActiveWorkbook.Name);
+                    File.Copy(Globals.ThisAddIn.Application.ActiveWorkbook.FullName, SaveAsPath.Text + "\\" + DateTime.Now.ToString("yyyyMMddHHmm") + "_" + Globals.ThisAddIn.Application.ActiveWorkbook.Name);
                     SaveAsCount++;
                     label2.Label = "另存操作计数：" + SaveAsCount.ToString();
                 }
@@ -123,6 +123,8 @@ namespace AutoSave
                 timer1.Enabled = false;
                 SwitchButton.Label = "开关(关)";
                 SwitchButton.Checked = false;
+                label1.Label = "已保存操作计数：" + SaveCount.ToString();
+                label2.Label = "已另存操作计数：" + SaveAsCount.ToString();
                 SaveCount = 0;
                 SaveAsCount = 0;
                 MessageBox.Show("在保存时遇到错误！已关闭自动保存开关，如需要请自行重新打开。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
